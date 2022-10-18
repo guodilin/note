@@ -4,6 +4,7 @@ import {path} from "@vuepress/utils";
 import {navbar, sidebar} from "./configs";
 
 export default defineUserConfig({
+    base:`/${"note"}/`,
     // 站点配置
     locales: {
         "/": {
