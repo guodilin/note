@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--方法一-->
+<script>
+    let aLink=document.createElement('a');
+    aLink.href='https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe'//设置下载地址
+    aLink.click()//触发点击事件
+</script>
+<!--方法二-->
+
+<!--Thank you for downloading WebStorm!-->
+<!--Your download should start shortly. If it doesn't, please use the direct link.-->
+感谢下载
+您的下载应该很快就会开始。如果没有，请使用<a href="https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe" id="down">直接链接</a>
+
+<script>
+    let aLink=document.getElementById('down');
+    aLink.click()//触发点击事件
+</script>
+</body>
+</html>

@@ -37,24 +37,34 @@
         name varchar(2)
         );
    ```
-1. 删除表
-   ```sql
-   drop table 表名;
-   -- 示例1
-   drop table study;
-   -- 示例2,存在即删除，没有跳过
-   drop table if exists 表名;
-   ```
-2. 修改表
+2. 删除表
+    ```sql
+    drop table 表名;
+    -- 示例1
+    drop table study;
+    -- 示例2,存在即删除，没有跳过
+    drop table if exists 表名;
+    ```
+3. 清空表
+
+    ```sql
+    -- 如果不加条件，则删除表中所有记录
+    delete from 表名 [where 条件];
+    -- 推荐使用，效率更高，先删除表，然后再创建一张一样的表
+    TRUNCATE TABLE 表名;
+    ```
+
+4. 修改表
    ```sql
    rename table 原表名 to 新表名;
    ```
-3. 查询表
+5. 查询表
    ```sql
    desc 表名;
    desc users;
    show tables;-- 查看所有表
    ```
+
 ##### 3. 字段增删改查
 1. 新增表字段
    ```sql

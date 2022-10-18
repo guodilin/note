@@ -9,7 +9,9 @@ from rest_framework import serializers
 from rest_framework.response import Response
 from api.models import User
 
+# 创建序列化器
 class UserSerializer(serializers.Serializer):
+    # 需要做的序列化
     username = serializers.CharField(source='UserName')
     pwd = serializers.CharField(source='Password')
     mobile = serializers.CharField(source='Mobile')
@@ -23,7 +25,11 @@ class UserView(APIView):
     # 请求所有数据
     def get(self, request):
         userall = User.objects.all()
-        serializer = UserSerializer(instance=userall, many=True)    # 序列化instance
+        # 序列化instance
+        # 反序列化是data
+        # many  True多条False单条
+        serializer = UserSerializer(instance=userall, many=True)  
+        # 返回数据
         return Response(serializer.data)
     # 添加数据
     def post(self, request):
@@ -39,6 +45,7 @@ class UserView(APIView):
         #     return Response(serializer.errors)
         try:
             serializer.is_valid(raise_exception=True)
+            # serializer.validated_data  效验成功的数据
             # 插入
             stu = User.objects.create(**serializer.validated_data)
             ser = UserSerializer(instance=stu, many=False)

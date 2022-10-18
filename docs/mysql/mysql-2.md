@@ -56,7 +56,8 @@ update 表名称 set 列名称 = 新值 where 列名称 = 某值;
 delete from 表名称 where 列名称 = 值;
 -- 包含"fred wilson" 行会被删除：
 delete from person where lastname = 'wilson';
--- 删除所有行
+-- 如果不加条件，则删除表中所有记录
 delete from 表名称;
-delete from 表名称;
+-- 删除表推荐使用以下方式，效率更高，先删除表，然后再创建一张一样的表
+TRUNCATE TABLE 表名;
 ```
