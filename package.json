@@ -1,0 +1,14 @@
+{
+  "name": "studynote",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "guodilin <admin@guodilin.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.51"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
