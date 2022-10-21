@@ -109,6 +109,12 @@ export const zh:NavbarConfig = [
         text: 'network',
         children: [
           {
+            text: 'network',
+            link: '/network/',
+            // 该元素将一直处于激活状态
+            activeMatch: '^/network/',
+          },
+                    {
             text: 'huawei',
             link: '/huawei/',
             // 该元素将一直处于激活状态
