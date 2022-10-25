@@ -1,10 +1,5 @@
 ##### background(背景)
 
-+ background-position：背景位置定位。X和Y轴，默认值x和y为0%，值：top、left、center、right、%、px
-+ background-size：背景大小控制。值：px、%、cover，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。。
-+ background-clip：背景的绘制区域。值：border-box，默认值，边框区域绘制背景。padding-box，背景内边距区域绘制背景。content-box，内容区域绘制背景。
-+ background-origin：背景图片定位起点。值：padding-box，默认值，相对于内边距框来定位。border-box，相对于边框来定位。content-box，相对于内容框来定位。
-
 ```css
 /* 连写 */
 background：color image repeat attchment position;
@@ -20,11 +15,13 @@ background-repeat: repeat-y; /* 将在垂直方向重复 */
 /* 背景图像是否固定或者随着页面的其余部分滚动 */
 background-attachment: fixed; /* 固定背景图片不随页面滚动,默认值scroll */
 /* 背景位置定位 */
-background-position:;
+background-position:;	/* 背景位置定位。X和Y轴，默认值x和y为0%，值：top、left、center、right、%、px */
 /* 背景大小控制 */
-background-size:;
+background-size:;	/* 背景大小控制。值：px、%、cover，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
 /* 背景的绘制区域 */
-background-clip:;
+background-clip: border-box;	/* 边框区域绘制背景,默认值 */
+background-clip: padding-box;	/* 内边距区域绘制背景 */
+background-clip: content-box;	/* 内容区域绘制背景 */
 /* 背景图片定位起点 */
 background-origin: padding-box;/* 相对于内边距框来定位 */
 background-origin: border-box;/* 相对于边框来定位 */
@@ -87,7 +84,7 @@ padding-left: 20px; /* 设置左内边距 值：px、% */
 
 
 
-##### CSS浮动（float）
+##### float(浮动)
 
 ```css
 float: left; /* 向左浮动。脱离标准流。多个子元素时超出父元素宽将换行显示 */
@@ -96,7 +93,7 @@ float: right; /* 向右浮动。脱离标准流。多个子元素时超出父元
 
 
 
-##### CSS定位（position）  
+##### position(定位)  
 
 > "left", "top", "right" 以及 "bottom" 属性进行规定即定位位置。（如果出现隐藏可以使用z-index设置可以层次。）
 ```css
@@ -147,9 +144,6 @@ text-align: right;	/* 字符居右显示 */
 
 
 ##### text-decoration
-  + 值：overline，定义文本上的一条线。line-through，定义文本中间的一条线。underline，定义文本下的一条线。
-  + 示例：文本默认无线条。
-
 ```css
 text-decoration: none; /*文本下划线*/
 text-decoration: overline;	/* 文本上方显示一条线 */
@@ -160,40 +154,36 @@ text-decoration: underline;	/* 文本下方显示一条线 */
 
 
 ##### text-indent
-  + 值：px、%、em。
-  + 示例：首行缩进5个像素。
-
 ```css
-text-indent: 5px;
+text-indent: 5px;	/* 首行缩进5个像素,单位px、%、em */
 ```
 
 
 
 ##### text-transform
-  + 值：lowercase，所有字母转换为小写字母。uppercase，把所有字母转换为大写。capitalize，首字母转换为大写。
-  + 示例：所有字母转换为大写。
-
 ```css
-text-transform: uppercase;
+text-transform: lowercase;	/* 把所有字母转换为小写字母 */
+text-transform: uppercase;	/* 把所有字母转换为大写 */
+text-transform: capitalize;	/* 首字母转换为大写 */
 ```
 
 
 
 ##### word-spacing
-  + 值：px、em。说明：设置字符之间的间距。
-  + 示例：设置字符之间的间距为9像素。和letter-spacing不一样的是，letter-spacing每个字母的间距。对汉字没有多大意义。
+> 设置字符之间的间距。px、em
 
 ```css
-word-spacing: 9px;
+word-spacing: 9px;	/* 设置字符之间的间距为9像素 */
+/* 和letter-spacing不一样的是，letter-spacing每个字母的间距。对汉字没有多大意义 */
 ```
 
 
 
 ##### white-space
-  + 值：normal，默认，忽略换行及空格。pre，换行和空格会保留。nowrap，永远不换行，直遇到br标签。
-
 ```css
-white-space: pre;
+white-space: normal;	/* 忽略换行及空格,默认值 */
+white-space: pre;		/* 换行和空格会保留 */
+white-space: nowrap;	/* 永远不换行,直遇到br标签 */
 ```
 
 

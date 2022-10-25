@@ -69,6 +69,12 @@ export const zh: SidebarConfig = {
             children: ['/uwsgi/README.md'],
         },
     ],
+    '/webpack/': [
+        {
+            text: 'webpack',
+            children: ['/webpack/README.md'],
+        },
+    ],
     '/vuepress/': [
         {
             text: 'vuepress',

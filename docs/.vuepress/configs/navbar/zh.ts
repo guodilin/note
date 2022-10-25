@@ -41,6 +41,12 @@ export const zh:NavbarConfig = [
             // 支持正则表达式
             activeMatch: '^/javascript/',
           },
+          {
+            text: 'webpack',
+            link: '/webpack/',
+            // 该元素将一直处于激活状态
+            activeMatch: '^/webpack/',
+          },
         ],
       },
       {
