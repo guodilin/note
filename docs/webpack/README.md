@@ -1,6 +1,8 @@
-# 安装与配置
+# webpack
 
-## 安装webpack
+<https://github.com/webpack/webpack>
+
+## 安装
 
 - **安装**
 
@@ -22,7 +24,7 @@ npm install --save-dev webpack
   </CodeGroupItem>
 </CodeGroup>
 
-## 配置webpack
+## 配置
 
 - **配置**：创建`webpack.config.js`文件
 
@@ -124,12 +126,14 @@ module.exports = {
         path: path.join(__dirname, 'dist'),   // 打包入口文件的路径
         // 生成的文件名
         filename: 'bundle.js'
-
     },
     devServer: {
+        open: true, // 初次打包完成后，自动打开浏览器
+        host: '127.0.0.1',	// 实时打包使用的主机地址
+        port: 8081,	// 实时打包所使用的端口号
         static: {
-            directory: path.join(__dirname,'/')
-        },     
+            directory: path.join(__dirname,'/') // 打开路径
+        },
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -195,6 +199,284 @@ module.exports = {
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"
   }
+}
+```
+
+# Styling
+
+## style-loader
+
+> 将模块的导出作为样式添加到DOM
+
+```bash
+npm install --save-dev style-loader
+```
+
+```bash
+yarn add -D style-loader
+```
+
+- **配置**：webpack.config.js
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+};
+```
+
+<https://github.com/webpack-contrib/style-loader>
+
+## css-loader
+
+> 使用解析的导入加载CSS文件并返回CSS代码
+
+```bash
+npm install --save-dev css-loader
+```
+
+```bash
+yarn add -D css-loader
+```
+
+- **引入文件** `index.js`
+
+```js
+import css from "file.css";
+```
+
+- **css**:`style.css`
+
+```css
+body {
+  background: green;
+}
+```
+
+- **配置**：webpack.config.js
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+};
+```
+
+[webpack-contrib/css-loader: CSS Loader (github.com)](https://github.com/webpack-contrib/css-loader)
+
+## less-loader
+
+> 加载并编译LESS文件
+
+```bash
+npm install less less-loader --save-dev
+```
+
+```bash
+yarn add -D less less-loader
+```
+
+- **配置**：webpack.config.js
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.less$/i,
+        use: [
+          // compiles Less to CSS
+          "style-loader",
+          "css-loader",
+          "less-loader",
+        ],
+      },
+    ],
+  },
+};
+```
+
+## Sass/SCSS
+
+> 加载并编译Sass/SCSS文件
+
+```bash
+npm install sass-loader sass webpack --save-dev
+```
+
+```bash
+yarn add -D sass-loader sass webpack
+```
+
+```js
+import "./style.scss";
+```
+
+- **scss**: `style.scss`
+
+```scss
+$body-color: red;
+
+body {
+  color: $body-color;
+}
+```
+
+<https://github.com/webpack-contrib/sass-loader>
+
+## url-loader
+
+- **安装**
+
+```bash
+npm install url-loader --save-dev
+```
+
+- **配置**：`webpack.config.js`
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        // 将文件转换为base64 URI的webpack加载程序。
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              // 只有<=limit大小的图片才会转换为base64
+              limit: 8192, // 字节
+            },
+          },
+        ],
+      },
+    ],
+  },
+};
+```
+
+<https://github.com/webpack-contrib/url-loader>
+
+## file-loader
+
+- **安装**
+
+```bash
+npm install file-loader
+```
+
+- **配置**：`webpack.config.js`
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+    ],
+  },
+}
+```
+
+<https://github.com/webpack-contrib/url-loader>
+
+## babel-loader
+
+- **安装**
+
+```bash
+npm install babel-loader @babel/core @babel/preset-env --save-dev
+```
+
+- **配置**：`webpack.config.js`
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+    ],
+  },
+}
+```
+
+<github.com/babel/babel-loader>
+
+## clean-webpack-plugin
+
+> 自动删除dist文件夹
+
+- **安装**
+
+```bash
+ npm install clean-webpack-plugin --save-dev
+```
+
+- **配置**：`webpack.config.js`
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+    ],
+  },
+}
+```
+
+<github.com/babel/babel-loader>
+
+## Source Map
+
+- 开发环境下
+  - 建议把devtool的值设置为eval-source-map
+  - 好处，可以精准的定位到具体的错误行
+- 生产环境下
+  - 建议关闭Source Map 或将devtool的值设置为nosources-source-map
+  - 好处，仿止源码泄露，提高网站的安全性
+- `webpack.config.js`
+
+```js
+module.exports = {
+    // 报错行对准源代码
+    devtool: 'eval-source-map',
+    // 定位行号，不暴露源码
+    devtool: 'nosources-source-map',
+    // 暴露源码，不建议使用
+    devtool: 'nosources-source-map',
 }
 ```
 

@@ -176,3 +176,12 @@ ln -s /usr/local/python3.10.6/bin/pip3 /usr/bin/pip
 1. 下载地址：<https://www.python.org/ftp/python/>
 2. 阿里源下载地址：<https://registry.npmmirror.com/binary.html?path=python/>
 
+## 5. 虚拟环境
+
+```bash
+python -m  venv test_env	// test_env 为虚拟环境名称
+cd E:\PythonEnv\test_env\scripts	// 进入虚拟环境
+.\activate					// 激活虚拟环境
+pip list					// 测试环境模块安装
+```
+

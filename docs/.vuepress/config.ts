@@ -9,7 +9,7 @@ export default defineUserConfig({
     locales: {
         "/": {
             lang: "",
-            title: "小郭同学 - 学习笔记",
+            title: "大大熊 - 学习笔记",
             description: "Welcome to my site",
         },
     },

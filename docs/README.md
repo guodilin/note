@@ -7,5 +7,6 @@ footer: MIT Licensed | Copyright © 1994 - 2022  www.guodilin.com
 
 > 关于本人
 * 90后
-* 摩羯座
+
+> 越无能，越易怒
 
