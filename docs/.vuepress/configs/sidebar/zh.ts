@@ -4,7 +4,7 @@ export const zh: SidebarConfig = {
     '/html/': [
         {
             text: 'html',
-            children: ['/html/README.md'],
+            children: ['/html/README.md','/html/html_1.md','/html/html_2.md','/html/html_3.md'],
         },
     ],
     '/css/': [
