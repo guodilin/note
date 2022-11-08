@@ -120,10 +120,8 @@ pip3 install mysqlclient
 ```shell
 # 安装django（这步其实可以省略，会打包至requirements.txt中）
 pip install django==4.1
-# 需要上线的项目中安装pipreqs
-pip install pipreqs
 # 生成requirements.txt保存至项目目录中
-pipreqs . --encoding=utf8
+pip freeze > requirements.txt
 # 创建项目安装路径并将需要上传的目录上传至本目录
 mkdir -p /www/wwwguodilincom
 # 安装项目所需依赖
