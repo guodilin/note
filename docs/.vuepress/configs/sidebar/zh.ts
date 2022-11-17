@@ -117,4 +117,10 @@ export const zh: SidebarConfig = {
             children: ['/Java/README.md', '/Java/Java_1.md','/Java/Java_2.md','/Java/Java_3.md','/Java/Java_4.md','/Java/Java_5.md'],
         },
     ],
+    '/vue/': [
+        {
+            text: 'Vue',
+            children: ['/vue/README.md', '/vue/vue_1.md','/vue/vue_2.md','/vue/vue_3.md','/vue/vue_4.md','/vue/vue_5.md'],
+        },
+    ],
 }

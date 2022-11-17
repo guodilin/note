@@ -5,26 +5,26 @@
 ##### 1. 终端安装
 
    ```shell
-   py -m pip install Django   # 安装django
-   py -m pip install Django==4.0 # 安装指定版本
-   py -m django --version    # 版本查看
+   python -m pip install Django   # 安装django
+   python -m pip install Django==4.0 # 安装指定版本
+   python -m django --version    # 版本查看
    django-admin startproject mysite  # 创建项目
    ```
 
 ##### 2. 启动django
 
 ```shell
-py manage.py runserver 80  # 默认8000
-py manage.py startapp # 创建应用
-py manage.py migrate
+python manage.py runserver 80  # 默认8000
+python manage.py startapp # 创建应用
+python manage.py migrate
 ```
 
 ##### 3. 常用命令
 
 ```shell
-py manage.py runserver  # 启动项目
-py manage.py startapp music   # 创建music应用，应用不能使用系统关键字
-py manage.py migrate
+python manage.py runserver  # 启动项目
+python manage.py startapp music   # 创建music应用，应用不能使用系统关键字
+python manage.py migrate
 python manage.py makemigrations	# 生成迁移文件
 python manage.py migrate	# 执行迁移文件
 ```
@@ -41,7 +41,7 @@ django-admin startproject mysite # 创建mysite项目
 
 ```shell
 cd mysite   # 进入项目目录
-py manage.py runserver 80  # 启动项目
+python manage.py runserver 80  # 启动项目
 ```
 
 3. 打开项目
@@ -55,7 +55,7 @@ py manage.py runserver 80  # 启动项目
 ```python
 # 创建应用 music
 # /guodilin/
-py manage.py startapp music
+python manage.py startapp music
 ```
 
 2. 配置应用
@@ -368,6 +368,23 @@ STATIC_URL = 'https://static.guodilin.com/'	# 远程静态，必须带 /
 # 引入所有配置项
 from django.conf import settings
 ```
+
+###### CSRF_TRUSTED_ORIGINS
+
+```python
+# 表单提交CSRF验证失败 403 
+CSRF_TRUSTED_ORIGINS = ['https://www.guodilin.com']
+```
+
+> form表单
+
+```html
+<form action="/" method="post">
+    {% csrf_token %}
+</form>
+```
+
+
 
 ##### 2. urls.py
 
