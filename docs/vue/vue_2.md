@@ -24,6 +24,8 @@ yarn global upgrade --latest @vue/cli
 vue create vue-demo
 ```
 
+- main.js
+
 ```js
 new Vue({
   el: '#app',
@@ -35,3 +37,58 @@ new Vue({
 }).$mount('#app')
 ```
 
+- Test.vue
+
+```vue
+<template>
+  <div class="box">
+    <h1>
+      {{ username }}
+    </h1>
+    <button @click="chaName">修改用户名</button>
+    <br />
+    <button @click="add">{{ count }}</button>
+  </div>
+</template>
+<script>
+// 默认导出
+export default {
+  // 定义数据源
+  data() {
+    return {
+      username: "zs",
+      count: 0,
+    };
+  },
+  // 点击事件
+  methods: {
+    chaName() {
+      // 点击后修改值
+      this.username = "ww";
+    },
+    add() {
+      this.count += 1;
+    },
+  },
+  // 侦听器
+  watch: {
+    // newVal 是变化后的值，oldVal 是变化前的旧值
+    username(newVal, oldVal) {
+      console.log(newVal, oldVal);
+    },
+  },
+  // 计算属性
+  computed: {},
+  // 过滤器
+  filters: {},
+};
+</script>
+<style lang="less">
+.box {
+  background: yellow;
+  h1 {
+    color: red;
+  }
+}
+</style>
+```

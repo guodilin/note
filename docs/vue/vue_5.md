@@ -1,30 +1,22 @@
 # 指令
 
-v-text
+## v-text
 
-v-html
+## v-html
 
-v-bind
+## v-bind
 
-简写`:`
+## v-on
 
-属性绑定
+## v-if
 
-v-on
+## v-if-else
 
-简写`@`
+## v-else
 
-事件绑定
-
-v-if
-
-v-if-else
-
-v-else
-
-v-for
+## v-for
 
 :key
 
-v-model
+## v-model
 
