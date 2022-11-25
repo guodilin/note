@@ -1,4 +1,4 @@
-# 介绍
+# 一、体验Vue
 
 ### 推荐大家安装的 VScode 中的 Vue 插件
 
@@ -153,5 +153,53 @@ v-if 指令在使用的时候，有两种方式：
    <p v-if="type === 'A'">良好</p>
    ```
 
-   
+传统下载导入方式
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  	<script src="https://v2.cn.vuejs.org/js/vue.js"></script>
+</head>
+<body>
+<!--希望vue能够控制下面的这个div-->
+<div id="app">{{ username }}</div>
+<script>
+    // 创建vue的实例对象
+    const vm = new Vue({
+        // el 属性是固定的写法，表示当前vm实例要控制页面上的哪个区域
+        el: '#app',
+        // data 对象就是要渲染到页面上的数据
+        data: {
+            username:'guodilin'
+        }
+    })
+</script>
+</body>
+</html>
+```
+
+
+
+```html
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">{{ message }}</div>
+
+<script>
+  const { createApp } = Vue
+  
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  }).mount('#app')
+</script>
+```
 
