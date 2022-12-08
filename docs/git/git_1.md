@@ -10,8 +10,8 @@ git init	# 初始化git
 
 ```bash
 git config -l # 查看当前git配置
-git config --global user.name "guodilin"	# 配置用户名
-git config --global user.email "gz_lxkj@163.com"	# 配置邮箱
+git config user.name "guodilin"	# 配置用户名
+git config user.email "gz_lxkj@163.com"	# 配置邮箱
 ```
 
 添加文件到暂缓区
