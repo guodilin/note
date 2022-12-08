@@ -56,26 +56,6 @@ git reset --hard 版本号	# 恢复指定版本
 git reset --hard 3d7b12f	# 恢复指定版本的实例
 ```
 
-
-
-# 基础配置
-
-##### 全局配置
-```sh
-git config --global user.name "guodilin"
-git config --global user.email "gz_lxkj@163.com"
-```
-##### 创建 git 仓库
-```sh
-mkdir note
-cd note
-git init 
-touch README.md
-git add README.md
-git commit -m "first commit"
-git remote add origin https://gitee.com/guodilin/note.git
-git push -u origin "master"
-```
 ##### 已有仓库
 ```sh
 cd existing_git_repo
@@ -86,5 +66,5 @@ git push -u origin "master"
 ```sh
 git add .
 git commit -m "1"
-git push -u origin "master"
+git push
 ```
