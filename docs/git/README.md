@@ -29,36 +29,6 @@ bin/:	# 表示忽略当前路径下的bin文件夹，该文件夹下的内容都
 
 # git基础命令
 
-```sh
-# 查看配置
-git config -l
-# 查看当前用户配置
-git config --global --list
-# 查看系统配置
-git config --system --list
-#名称
-git config --global user.name "guoidlin"
-#配置邮箱
-git config --global user.email "guodilin@189.cn"
-#初始化git仓库
-git init
-#添加所有文件到暂存区
-git add .
-#查看是否提交暂存区
-git status
-# 提交本地仓库
-git commit -m “提交说明”
-
-git push
-
-git pull
-
-git reset
-
-git checkout
-#克隆
-git clone [url]
-```
 ## 分支常用命令
 ```sh
 # 列出所有本地分支
