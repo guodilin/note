@@ -1,4 +1,34 @@
+# 前言
+
+## 安装
+
+GIT下载地址：<https://git-scm.com/download>
+
+## 忽略文件
+
+新建一个文件，`.gitignore`
+
+```bash
+touch .gitignore	# 终端中创建.gitignore
+```
+
+文件配置
+
+- 被过滤的文件就不会出现在git仓库中
+
+```bash
+*.css	# 表示忽略所有css文件
+!lib.a	# 表示但lib.a除外
+/todo	# 表示忽略根目录下的todo文件
+
+bin/:	# 表示忽略当前路径下的bin文件夹，该文件夹下的内容都会被忽略
+*.log:	# 表示忽略所有.log文件
+```
+
+
+
 # git基础命令
+
 ```sh
 # 查看配置
 git config -l

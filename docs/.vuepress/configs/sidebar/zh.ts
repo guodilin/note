@@ -36,7 +36,7 @@ export const zh: SidebarConfig = {
     '/git/': [
         {
             text: 'git学习',
-            children: ['/git/README.md', '/git/git_1.md'],
+            children: ['/git/README.md', '/git/git_1.md', '/git/git_2.md'],
         },
     ],
     '/English/': [

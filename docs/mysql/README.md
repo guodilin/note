@@ -32,6 +32,9 @@ CREATE user 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
 ## 2. windwos安装
 
 下载地址：<https://dev.mysql.com/downloads/mysql/>
+运行库：<https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022>
+
+- mysql需要安装vs2017运行库,因为mysql使用的是c和c++编写的
 
 ##### ①. 解压，新建my.ini配置
 
