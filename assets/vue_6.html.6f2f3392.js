@@ -1,0 +1,1 @@
+import{_ as t,o as a,c,a as e,b as o}from"./app.ca1881d0.js";const r={},s=e("h1",{id:"七-vuex状态管理",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#七-vuex状态管理","aria-hidden":"true"},"#"),o(" 七. Vuex状态管理")],-1),_=[s];function n(d,i){return a(),c("div",null,_)}const h=t(r,[["render",n],["__file","vue_6.html.vue"]]);export{h as default};

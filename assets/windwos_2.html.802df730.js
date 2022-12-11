@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-0ec05d58","path":"/windows/windwos_2.html","title":"","lang":"","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1666345886000,"contributors":[{"name":"guodilin","email":"admin@guodilin.com","commits":1}]},"filePathRelative":"windows/windwos_2.md"}');export{t as data};

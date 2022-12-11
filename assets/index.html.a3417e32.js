@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-9679e3e2","path":"/huawei/","title":"常用命令","lang":"","frontmatter":{},"excerpt":"","headers":[{"level":1,"title":"常用命令","slug":"常用命令","link":"#常用命令","children":[]}],"git":{"updatedTime":1666064681000,"contributors":[{"name":"guodilin","email":"admin@guodilin.com","commits":1}]},"filePathRelative":"huawei/README.md"}');export{e as data};

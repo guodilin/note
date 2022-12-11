@@ -1,0 +1,9 @@
+import{_ as a,r as o,o as t,c,a as n,b as e,d as l,e as i}from"./app.ca1881d0.js";const r={},d=n("h1",{id:"安装",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#安装","aria-hidden":"true"},"#"),e(" 安装")],-1),p=n("code",null,"nodejs",-1),m={href:"https://nodejs.org/en/download/",target:"_blank",rel:"noopener noreferrer"},u=i(`<ul><li>安装完成后需要升级<code>npm</code>版本<code>yarn</code> 安装需要<code>npm5.9+</code>版本</li></ul><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> <span class="token function">npm</span> <span class="token parameter variable">-g</span>
+<span class="token comment"># 升级npm最新版本</span>
+<span class="token function">npm</span> config get registry
+<span class="token comment"># 查看源</span>
+<span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry https://registry.npm.taobao.org/
+<span class="token comment"># 切换阿里源</span>
+<span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> <span class="token function">yarn</span>
+<span class="token comment"># 安装yarn</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,2);function v(_,k){const s=o("ExternalLinkIcon");return t(),c("div",null,[d,n("blockquote",null,[n("p",null,[e("安装"),p,e(),n("a",m,[e("https://nodejs.org/en/download/"),l(s)])])]),u])}const f=a(r,[["render",v],["__file","index.html.vue"]]);export{f as default};

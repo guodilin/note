@@ -1,0 +1,1 @@
+import{_ as a,o as t,c as o,a as e,b as c}from"./app.ca1881d0.js";const n={},r=e("h1",{id:"视图",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#视图","aria-hidden":"true"},"#"),c(" 视图")],-1),s=[r];function _(d,i){return t(),o("div",null,s)}const l=a(n,[["render",_],["__file","Django_3.html.vue"]]);export{l as default};

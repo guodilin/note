@@ -1,0 +1,1 @@
+import{_ as l,o as n,c as o,a as e}from"./app.ca1881d0.js";const t={},c=e("blockquote",null,[e("p",null,"心中理想")],-1),_=e("ol",null,[e("li",null,"越无能，越易怒。2022-11-22"),e("li",null,"心净则人净。2022-12-01")],-1),s=[c,_];function a(i,r){return n(),o("div",null,s)}const d=l(t,[["render",a],["__file","index.html.vue"]]);export{d as default};

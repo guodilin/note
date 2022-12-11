@@ -1,0 +1,1 @@
+import{_ as o,o as t,c as a,a as e,b as l}from"./app.ca1881d0.js";const r={},s=e("h1",{id:"hello-world",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#hello-world","aria-hidden":"true"},"#"),l(" hello world")],-1),c=[s];function _(d,n){return t(),a("div",null,c)}const i=o(r,[["render",_],["__file","mysql_5.html.vue"]]);export{i as default};

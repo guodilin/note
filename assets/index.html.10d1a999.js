@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-744e35e2","path":"/vue/","title":"一、体验Vue","lang":"","frontmatter":{},"excerpt":"","headers":[{"level":1,"title":"一、体验Vue","slug":"一、体验vue","link":"#一、体验vue","children":[]}],"git":{"updatedTime":1669339502000,"contributors":[{"name":"guodilin","email":"admin@guodilin.com","commits":5}]},"filePathRelative":"vue/README.md"}');export{e as data};

@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-74534679","path":"/vuepress/","title":"安装","lang":"","frontmatter":{},"excerpt":"","headers":[{"level":1,"title":"安装","slug":"安装","link":"#安装","children":[]}],"git":{"updatedTime":1666064681000,"contributors":[{"name":"guodilin","email":"admin@guodilin.com","commits":1}]},"filePathRelative":"vuepress/README.md"}');export{e as data};

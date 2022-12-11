@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-31995afb","path":"/Django/","title":"序言","lang":"","frontmatter":{},"excerpt":"","headers":[{"level":1,"title":"序言","slug":"序言","link":"#序言","children":[]}],"git":{"updatedTime":1666090952000,"contributors":[{"name":"guodilin","email":"admin@guodilin.com","commits":2}]},"filePathRelative":"Django/README.md"}');export{e as data};
