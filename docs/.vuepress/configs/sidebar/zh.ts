@@ -120,7 +120,7 @@ export const zh: SidebarConfig = {
     '/vue/': [
         {
             text: 'Vue',
-            children: ['/vue/README.md', '/vue/vue_1.md','/vue/vue_2.md','/vue/vue_3.md','/vue/vue_4.md','/vue/vue_5.md'],
+            children: ['/vue/README.md', '/vue/vue_1.md','/vue/vue_2.md','/vue/vue_3.md','/vue/vue_4.md','/vue/vue_5.md','/vue/vue_6.md'],
         },
     ],
 }
