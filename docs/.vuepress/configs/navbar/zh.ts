@@ -173,6 +173,12 @@ export const zh:NavbarConfig = [
             // 该元素将一直处于激活状态
             activeMatch: '^/vuepress/',
           },
+          {
+            text: 'Other',
+            link: '/Other/',
+            // 该元素将一直处于激活状态
+            activeMatch: '^/Other/',
+          },
         ],
       },
 ]
